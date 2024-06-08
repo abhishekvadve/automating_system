@@ -8,6 +8,7 @@ import pyvolume
 import speech_recognition as sr
 import pyttsx3
 
+#voice functionality
 def speak(text, voice_id=None):
     engine = pyttsx3.init()
     voices = engine.getProperty('voices')
