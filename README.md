@@ -1,52 +1,76 @@
-# AI Assistant
+# Automating System Tasks with Your AI Assistant
 
-## Introduction
+This project provides an AI assistant that automates various tasks on your system, including:
 
-This is an AI assistant program built in Python that can perform various tasks such as searching for files, running executables, playing media files, adjusting brightness and volume, and providing information on various topics.
+- **File management:** Search for files, view file details, and run executables.
+- **Media playback:** Play music and video files in their default media players.
+- **System adjustments:** Control display brightness and volume levels.
+- **Information retrieval:** Get the current date and time (using system commands).
+- **Conversational interaction:** Respond to basic greetings, answer simple questions, and tell jokes.
 
-## Features
+## Key Features
 
-- **File Search:** Search for files in the entire system.
-- **File Details:** Get details about a file, including its path, size, and content.
-- **Run Executables:** Execute executable files.
-- **Play Media Files:** Play video and audio files.
-- **Adjust Brightness:** Control the brightness of the screen.
-- **Adjust Volume:** Control the volume of the system.
-- **Voice Interaction:** Interact with the assistant using voice commands.
-- **Gossips:** Engage in casual conversation and provide responses to common questions.
+- **Natural language processing:** Understands user commands spoken or typed in plain language.
+- **Cross-platform compatibility:** Should work on major operating systems (potential OS-specific adjustments may be required).
+- **Extensibility:** The modular design allows for adding new functionalities in the future.
 
-## Getting Started
+## Installation
 
-### Prerequisites
+### Prerequisites:
 
-- Python 3.x
-- Required Python libraries (specified in requirements.txt)
+Ensure you have Python 3 ([Download Python](https://www.python.org/downloads/)) and the following libraries installed:
 
-### Installation
+- collections
+- os
+- re
+- random
+- subprocess
+- screen_brightness_control  # Might require OS-specific library
+- pyvolume                   # Might require OS-specific library
+- speech_recognition         # Requires Google Speech-to-Text API setup ([Google Speech-to-Text API](https://cloud.google.com/speech-to-text))
+- pyttsx3                    ([Pyttsx3](https://pypi.org/project/pyttsx3/))
 
-1. Clone the repository:
+### Clone the Repository:
 
-    ```bash
-    git clone https://github.com/your-username/ai-assistant.git
-    ```
+```bash
+git clone https://github.com/abhishekvadve/automating_system.git
+````
+### Install Dependencies:
 
-2. Run the program:
-
-    ```bash
-    python main.py
-    ```
+Navigate to the project directory. Run `pip install -r requirements.txt` (create a requirements.txt file listing the dependencies if it doesn't exist).
 
 ## Usage
 
-- Upon running the program, the AI assistant will greet you and wait for your commands.
-- You can interact with the assistant by typing commands or using voice input (if enabled).
-- Commands can include tasks such as searching for files, playing media, adjusting settings, or engaging in casual conversation.
-- To exit the program, simply type or say "exit".
+1. Run the script: `python main.py`
+2. Interact with the AI assistant by speaking or typing commands.
+3. Use a conversational tone, such as "Search for my presentation.ppt" or "Play some music."
+4. Exit the program by saying "exit" or typing "exit".
 
-## License
+## Example Usage
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+```plaintext
+You: Hello!
+AI Assistant: Hello! I'm your AI assistant. How can I help you today?
+You: Play some music.mp3.
+AI Assistant: Music file is now playing.
+(Music starts playing in the default media player)
+You: What is the time?
+AI Assistant: (Current date and time retrieved from system commands)
+You: Search for my report.docx.
+AI Assistant: I found the file 'report.docx' at: C:\Users\your_username\Documents
+You: Set brightness to 75%.
+AI Assistant: Brightness level set to 75%.
+You: Exit
+AI Assistant: Goodbye! Have a great day!
+```
 
-## Acknowledgments
+## Contributions
 
-- Inspired by virtual assistants like Siri, Alexa, Google Assistant and Jarvis!
+We welcome contributions to enhance this project! Here are some potential areas for improvement:
+
+- Support for additional file formats (e.g., images, documents)
+- Advanced file operations (e.g., move, copy, rename)
+- Integration with cloud storage services
+- Multitasking and task scheduling
+- Accessibility features (e.g., screen reader compatibility)
+
